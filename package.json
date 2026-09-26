@@ -1,0 +1,37 @@
+{
+  "name": "divide-and-conquer",
+  "private": true,
+  "description": "Adaptive times-tables and division practice for kids: spaced repetition, progress saved in the browser, zero frameworks.",
+  "keywords": [
+    "education",
+    "mathematics",
+    "times-tables",
+    "multiplication",
+    "division",
+    "spaced-repetition",
+    "kids",
+    "vanilla-js",
+    "no-framework"
+  ],
+  "author": {
+    "name": "Kuba",
+    "email": "kuba@tinkered.app"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "wrangler dev --port 40451",
+    "test": "node --test",
+    "test:e2e": "playwright test",
+    "deploy": "npm test && wrangler deploy"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "wrangler": "^4.137.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "workerd@1.20260921.1": true
+  }
+}

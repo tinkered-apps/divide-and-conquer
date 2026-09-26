@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Division</title>
+  <style>
+    :root {
+      --game-color: var(--color-teal);
+      --game-glyph: "÷";
+    }
+  </style>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+  <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1022" media="(prefers-color-scheme: dark)" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/game.css" />
+  <link rel="stylesheet" href="/css/help.css" />
+  <link rel="stylesheet" href="/division/css/division.css" />
+</head>
+<body data-help-page="game" data-title-key="title.divide">
+
+  <!-- ─── Status Bar ──────────────────────────────── -->
+  <header class="status-bar">
+    <a href="/" class="back-link" data-i18n="common.back" data-i18n-aria="common.backHome">← Back</a>
+
+    <div class="status-center">
+      <span id="timer" class="timer">2:00</span>
+    </div>
+
+    <div class="score-area">
+      <span class="score score--correct">
+        <span class="score-icon">✓</span>
+        <span id="score-correct" class="score-value">0</span>
+      </span>
+      <span class="score-sep"></span>
+      <span class="score score--incorrect">
+        <span class="score-icon">✗</span>
+        <span id="score-incorrect" class="score-value">0</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- ─── Main Game Area ─────────────────────────── -->
+  <main class="game-area">
+    <h1 class="sr-only" data-i18n="title.divide">Division</h1>
+    <div class="game-card">
+
+      <!-- Question -->
+      <div class="question-wrap">
+        <p id="question" class="question">? ÷ ? = ?</p>
+      </div>
+
+      <!-- Input -->
+      <div class="input-wrap">
+        <input
+          id="answer-input"
+          class="answer-input"
+          type="number"
+          inputmode="numeric"
+          placeholder="?"
+          autofocus
+          autocomplete="off"
+          aria-label="Your answer"
+          data-i18n-aria="common.answer"
+        />
+      </div>
+
+      <!-- Feedback -->
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+
+      <!-- Actions -->
+      <div class="btn-row">
+        <button id="btn-check" class="btn btn-primary btn-check" data-i18n="common.check">
+          Check
+        </button>
+        <button id="btn-next" class="btn btn-next" data-i18n="common.next" data-i18n-aria="common.nextAria">
+          Next question →
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="/js/translations.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/learning.js"></script>
+  <script src="/division/js/division.js"></script>
+  <script src="/js/help.js"></script>
+  <script src="/js/pwa.js"></script>
+</body>
+</html>

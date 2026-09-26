@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress | Divide &amp; Conquer</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+  <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1022" media="(prefers-color-scheme: dark)" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/progress/css/progress.css" />
+  <link rel="stylesheet" href="/css/help.css" />
+</head>
+<body data-help-page="progress" data-title-key="title.progress">
+  <nav class="grid-nav">
+    <a class="nav-back" href="/" data-i18n="common.backHomeText">← Home</a>
+  </nav>
+
+  <main class="grid-page">
+    <h1 class="sr-only" data-i18n="progress.title">Your progress</h1>
+    <div class="tabs" role="group" aria-label="Practice type" data-i18n-aria="progress.typeAria">
+      <button class="tab active" data-panel="mult-panel" aria-controls="mult-panel" aria-pressed="true" data-i18n="progress.tabMultiply">Multiplication</button>
+      <button class="tab" data-panel="div-panel" aria-controls="div-panel" aria-pressed="false" data-i18n="progress.tabDivide">Division</button>
+      <button class="tab" data-panel="missing-panel" aria-controls="missing-panel" aria-pressed="false" data-i18n="progress.tabMissing">Missing factor</button>
+    </div>
+
+    <div class="grids-row">
+      <section class="panel" id="mult-panel">
+        <h2 class="panel-title" data-i18n="progress.multiplyPanel">Multiplication Mastery</h2>
+        <div class="panel-subtitle" data-i18n="progress.multiplySubtitle">55 unique facts; 6×7 and 7×6 share the same progress</div>
+        <div class="grid-scroll"><div id="mult-grid" class="math-grid review-grid"></div></div>
+        <div class="summary"></div>
+      </section>
+
+      <section class="panel hidden-mobile" id="div-panel">
+        <h2 class="panel-title" data-i18n="progress.dividePanel">Division Mastery</h2>
+        <div class="panel-subtitle" data-i18n="progress.divideSubtitle">100 division facts; each tile shows the full equation</div>
+        <div class="grid-scroll"><div id="div-grid" class="math-grid review-grid"></div></div>
+        <div class="summary"></div>
+      </section>
+
+      <section class="panel hidden-mobile" id="missing-panel">
+        <h2 class="panel-title" data-i18n="progress.missingPanel">Missing Factor Mastery</h2>
+        <div class="panel-subtitle" data-i18n="progress.missingSubtitle">100 missing-factor facts; each tile shows the full equation</div>
+        <div class="grid-scroll"><div id="missing-grid" class="math-grid review-grid"></div></div>
+        <div class="summary"></div>
+      </section>
+    </div>
+
+    <div class="progress-legend" aria-label="Key" data-i18n-aria="progress.legendAria">
+      <span><i class="legend-none"></i><b data-i18n="progress.none">not practised</b></span>
+      <span><i class="legend-learning"></i><b data-i18n="progress.learning">learning</b></span>
+      <span><i class="legend-learned"></i><b data-i18n="progress.learned">remembered</b></span>
+      <span><i class="legend-review"></i><b data-i18n="progress.review">review due</b></span>
+    </div>
+  </main>
+
+  <div id="cell-modal" style="display:none;" aria-modal="true" role="dialog" aria-labelledby="cell-modal-expr">
+    <div id="cell-modal-box">
+      <button type="button" id="cell-modal-close" data-i18n-aria="common.close" aria-label="Close">×</button>
+      <div id="cell-modal-expr"></div>
+      <div id="cell-modal-result"></div>
+      <div id="cell-modal-status"></div>
+      <div id="cell-modal-bar-wrap">
+        <div id="cell-modal-bar-green"></div>
+        <div id="cell-modal-bar-red"></div>
+      </div>
+      <div id="cell-modal-counts"></div>
+      <div id="cell-modal-none"></div>
+    </div>
+  </div>
+
+  <script src="/js/translations.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/learning.js"></script>
+  <script src="/progress/js/progress.js"></script>
+  <script src="/js/help.js"></script>
+  <script src="/js/pwa.js"></script>
+</body>
+</html>

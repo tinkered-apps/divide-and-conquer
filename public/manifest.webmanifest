@@ -1,0 +1,27 @@
+{
+  "name": "Divide & Conquer",
+  "short_name": "Divide",
+  "description": "Master the times tables and division, one fact at a time.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f3ef",
+  "theme_color": "#f4f3ef",
+  "categories": ["education"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/home.png", "sizes": "824x1830", "type": "image/png", "form_factor": "narrow", "label": "Choose an activity to practise" },
+    { "src": "/screenshots/multiplication.png", "sizes": "824x1830", "type": "image/png", "form_factor": "narrow", "label": "Solve a multiplication question" }
+  ],
+  "shortcuts": [
+    { "name": "Multiplication", "url": "/multiplication" },
+    { "name": "Division", "url": "/division" },
+    { "name": "Progress", "url": "/progress" }
+  ]
+}

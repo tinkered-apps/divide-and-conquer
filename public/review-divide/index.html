@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn / review: division | Divide &amp; Conquer</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/icon-180.png" />
+  <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e1022" media="(prefers-color-scheme: dark)" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/review-divide/css/review.css" />
+  <link rel="stylesheet" href="/css/help.css" />
+</head>
+
+<body data-help-page="review" data-title-key="title.reviewDivide">
+
+  <nav class="grid-nav">
+    <a class="nav-back" href="/" data-i18n="common.backHomeText">← Home</a>
+  </nav>
+
+  <div class="grid-page single-panel">
+    <div class="panel">
+      <h1 class="panel-title" data-i18n="review.divide">Learn / review: division</h1>
+      <p class="panel-subtitle review-instructions"><span data-i18n="review.tapOnce">Tap once =</span> <span class="review-swatch" data-state="correct" aria-hidden="true"></span> <span data-i18n="review.mastered">(mastered),</span> <span data-i18n="review.tapTwice">twice =</span> <span class="review-swatch" data-state="incorrect" aria-hidden="true"></span> <span data-i18n="review.needsPractice">(needs practice),</span> <span data-i18n="review.tapThrice">three times = clear</span></p>
+      <div class="grid-scroll"><div id="div-grid" class="math-grid review-grid"></div></div>
+      <div id="review-status" class="sr-only" role="status" aria-live="polite"></div>
+      <div class="summary">
+        <div class="stat-chip">
+          <div class="num num-green" id="num-green">0</div>
+          <div class="lbl" data-i18n="review.knows">knows</div>
+        </div>
+        <div class="stat-chip">
+          <div class="num num-red" id="num-red">0</div>
+          <div class="lbl" data-i18n="review.doesNotKnow">needs practice</div>
+        </div>
+        <div class="stat-chip">
+          <div class="num num-gray" id="num-gray">100</div>
+          <div class="lbl" data-i18n="review.unmarked">unmarked</div>
+        </div>
+      </div>
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:var(--state-none-bg)"></div>
+          <span data-i18n="review.unmarked">unmarked</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:var(--state-mastered-bg)"></div>
+          <span data-i18n="review.knows">knows</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background-color:var(--state-due-bg);background-image:repeating-linear-gradient(-45deg, var(--state-stripe) 0 2px, transparent 2px 6px)"></div>
+          <span data-i18n="review.doesNotKnow">needs practice</span>
+        </div>
+      </div>
+      <button class="btn-reset" id="btn-reset" data-i18n="review.reset">Clear all marks</button>
+    </div>
+  </div>
+
+  <script src="/js/translations.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/review-divide/js/review-divide.js"></script>
+  <script src="/js/help.js"></script>
+  <script src="/js/pwa.js"></script>
+</body>
+
+</html>

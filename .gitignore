@@ -1,0 +1,10 @@
+node_modules/
+.superpowers/
+.claude/
+.audyt-prawny/
+.env
+.env.*.local
+.wrangler/
+.dev.vars*
+test-results/
+playwright-report/
